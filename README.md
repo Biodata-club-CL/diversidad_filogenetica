@@ -18,18 +18,7 @@ remotes::install_github("jinyizju/V.PhyloMaker")
 
 ## El directorio tiene la siguiente estructura:
 
-├── data/ # Datos de entrada y resultados intermedios
-├── output/ # Resultados principales como la matriz de comunidad
-├── figures/ # Mapas y visualizaciones finales
-├── R/ # Funciones auxiliares en R
-├── scripts/ # Scripts que se deben ejecutar en orden
-│ ├── 1_get_clean_data_set.r
-│ ├── 2_crear_comm_matrix.r
-│ ├── 3_phylo_tree.r
-│ ├── 4_indic_SR.r
-│ ├── 5_indic_DF.R
-│ ├── 6_mapas.r
-└── README.md # Este archivo
+<pre><code> ``` ├── data/ # Datos de entrada y resultados intermedios ├── output/ # Resultados principales como la matriz de comunidad ├── figures/ # Mapas y visualizaciones finales ├── R/ # Funciones auxiliares en R ├── scripts/ # Scripts que se deben ejecutar en orden │ ├── 1_get_clean_data_set.r │ ├── 2_crear_comm_matrix.r │ ├── 3_phylo_tree.r │ ├── 4_indic_SR.r │ ├── 5_indic_DF.R │ ├── 6_mapas.r └── README.md # Este archivo ``` </code></pre>
 
 
 ## Instrucciones
