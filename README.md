@@ -1,6 +1,6 @@
 # Tutorial: Cálculo de Diversidad Filogenética en R
 
-Este tutorial enseña cómo calcular la diversidad filogenética (PD) y su versión estandarizada (ses.PD) a partir de registros de ocurrencia de especies de plantas vasculares. El flujo de trabajo utiliza una grilla espacial sobre el territorio de Chile y un árbol filogenético generado con `V.PhyloMaker`.
+Este tutorial enseña cómo calcular la diversidad filogenética (PD) y su versión estandarizada (ses.PD) a partir de registros de ocurrencia de especies de arboles de Chile obtenidos de GBIF. El flujo de trabajo utiliza una grilla espacial sobre el territorio de Chile y un árbol filogenético generado con `V.PhyloMaker`.
 
 ## Requisitos
 
@@ -18,28 +18,18 @@ remotes::install_github("jinyizju/V.PhyloMaker")
 
 ## El directorio tiene la siguiente estructura:
 
-├── data/                   # Datos de entrada
-│   ├── occs_limpias.csv
-│   ├── combined_gbif_data.csv
-│   ├── grid_sf.rds
-├── output/                 # Resultados intermedios y finales
-│   ├── matriz_comunidad.csv
-│   ├── pd.rds
-│   ├── ses_pd.rds
-│   ├── arbol_filogenético.rds
-├── figures/                # Mapas y visualizaciones exportadas
-│   ├── mapas.pdf
-├── scripts/                # Scripts que se deben ejecutar en orden
-│   ├── 1_ get_clean_data_set.r
-│   ├── 2_crear_comm_matrix.r
-│   ├── 3_phylo_tree.r
-│   ├── 4_indic_SR.r
-│   ├── 5_indic_DF.R
-│   ├── 6_mapas.r
-├── R/                      # Funciones auxiliares en R (si las hubiera)
-│   ├── combina_gbif_data.r
-├── README.md
-
+├── data/ # Datos de entrada y resultados intermedios
+├── output/ # Resultados principales como la matriz de comunidad
+├── figures/ # Mapas y visualizaciones finales
+├── R/ # Funciones auxiliares en R
+├── scripts/ # Scripts que se deben ejecutar en orden
+│ ├── 1_get_clean_data_set.r
+│ ├── 2_crear_comm_matrix.r
+│ ├── 3_phylo_tree.r
+│ ├── 4_indic_SR.r
+│ ├── 5_indic_DF.R
+│ ├── 6_mapas.r
+└── README.md # Este archivo
 
 
 ## Instrucciones
