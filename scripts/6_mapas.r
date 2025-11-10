@@ -4,6 +4,8 @@ library(viridis)
 library(dplyr)
 library(sf)
 library(patchwork)
+
+ses_pd_signreadRDS("output/ses_pd.rds")
 # -------------------------------
 # Mapas
 # -------------------------------
@@ -47,7 +49,6 @@ ses_pd <- ggplot(grid_sespd_crop) +
   )
 
 
-
 # Categorizar según z-score
 grid_sespd_crop <- grid_sespd_crop %>%
   mutate(
@@ -84,4 +85,7 @@ ses_pd_sign <- ggplot(grid_sespd_crop) +
 
 
 # Combinar con patchwork
+figura_combinada <- (SR | pd | ses_pd | ses_pd_sign)
 (SR | pd | ses_pd | ses_pd_sign)
+
+ggsave("figures/mapas.pdf", figura_combinada, width = 16, height = 5)

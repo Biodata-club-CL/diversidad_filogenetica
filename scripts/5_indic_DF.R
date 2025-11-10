@@ -29,7 +29,7 @@ ses_pd_resultados$site <- rownames(ses_pd_resultados)
 saveRDS(pd_resultados, "output/pd.rds")
 saveRDS(ses_pd_resultados, "output/ses_pd.rds")
 
-
+ses_pd_resultados <- readRDS("output/ses_pd.rds")
 
 
 # -------------------------------
@@ -60,13 +60,14 @@ pd <- pd_resultados %>%
   select(celda_id = site,
         PD)
 
-grid_PD <- grid_crop %>%
+grid_pd <- grid_crop %>%
   left_join(pd, by = "celda_id")
 
 
 
-
-
+head(grid_sf)
+head(ses_pd_resultados)
+ses_pd_resultados$site <- rownames(ses_pd_resultados)
 grid_sespd <- grid_sf %>%
   left_join(ses_pd_resultados, by = c("celda_id" = "site"))
 

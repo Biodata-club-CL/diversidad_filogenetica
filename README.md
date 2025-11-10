@@ -25,31 +25,31 @@ remotes::install_github("jinyizju/V.PhyloMaker")
 
 ### 1. Preparar los datos limpios
 
-Ejecutar `1_get_clean_data_set.r` para filtrar y depurar los registros de ocurrencia.
+Correr `1_get_clean_data_set.r` para filtrar y depurar los registros de ocurrencia.
 
 ### 2. Crear la matriz de comunidad
 
-Ejecutar `2_crear_comm_matrix.r` para generar la matriz de presencia/ausencia por celda (`output/matriz_comunidad.csv`).
+Correr `2_crear_comm_matrix.r` para generar la matriz de presencia/ausencia por celda (`output/matriz_comunidad.csv`).
 
 ### 3. Generar el árbol filogenético
 
-Ejecutar `3_phylo_tree.r` para construir un árbol filogenético a partir de los nombres de especies usando `V.PhyloMaker`.
+Correr `3_phylo_tree.r` para construir un árbol filogenético a partir de los nombres de especies usando `V.PhyloMaker`.
 
 ### 4. Calcular riqueza de especies (SR)
 
-Ejecutar `4_indic_SR.r` para calcular la riqueza de especies por celda.
+Correr `4_indic_SR.r` para calcular la riqueza de especies por celda.
 
 ### 5. Calcular PD y ses.PD
 
-Ejecutar `5_indic_DF.R` para calcular la diversidad filogenética (PD) y la diversidad filogenética estandarizada (ses.PD) por celda.
+Correr `5_indic_DF.R` para calcular la diversidad filogenética (PD) y la diversidad filogenética estandarizada (ses.PD) por celda.
 
 ### 6. Visualizar los resultados
 
-Ejecutar `6_mapas.r` para generar mapas de riqueza, PD y ses.PD. El resultado combinado se guarda como un archivo PDF en la carpeta `figures/`.
+Correr `6_mapas.r` para generar mapas de riqueza, PD y ses.PD. El resultado combinado se guarda como un archivo PDF en la carpeta `figures/`.
 
 ## Créditos
 
-Este tutorial fue desarrollado con fines educativos en el marco del Club de Programación de la Facultad de Ciencias Naturales y Oceanográficas de la Universidad de Concepción.
+Este tutorial fue desarrollado con fines autoformativos en el marco del Club de Programación de la Facultad de Ciencias Naturales y Oceanográficas de la Universidad de Concepción.
 
 ---
 

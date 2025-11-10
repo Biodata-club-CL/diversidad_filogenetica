@@ -81,6 +81,7 @@ library(CoordinateCleaner)
 ## Limpieza de datos
 combined_data <- read.csv("data/combined_gbif_data.csv")
 head(combined_data)
+dim(combined_data)
 combined_data <- combined_data %>%
   select(
     scientificName,
@@ -152,6 +153,8 @@ str(cc_flags)
 
 # Conservar solo los puntos que pasaron todas las pruebas
 occs_limpias <- occs_crop_df[cc_flags, ]
-
+dim(occs_limpias)
+head(occs_limpias)
+unique(occs_limpias$scientificName)
 ## guardar datos limpios
 write.csv(occs_limpias, "data/occs_limpias.csv", row.names = FALSE)
